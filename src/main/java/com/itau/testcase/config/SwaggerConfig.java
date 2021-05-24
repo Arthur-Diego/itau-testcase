@@ -18,6 +18,7 @@ public class SwaggerConfig {
     @Bean
     public Docket api() {
         return new Docket(DocumentationType.SWAGGER_2)
+                .apiInfo(apiInfo())
                 .select()
                 .apis(RequestHandlerSelectors.basePackage("com.itau.testcase.resource"))
                 .paths(PathSelectors.any())
@@ -30,9 +31,7 @@ public class SwaggerConfig {
                 .title("Simple REST API")
                 .description("Simple API(Rest) for password validation following specifications")
                 .version("1.0.0")
-                .license("Apache License Version 2.0")
-                .licenseUrl("https://www.apache.org/licenses/LICENSE-2.0")
-                        .contact(new Contact("Arthur Diego", "https://www.linkedin.com/in/arthur-diego/", "arthur.diego7@gmail.com"))
-                        .build();
+                .contact(new Contact("Arthur Diego", "https://www.linkedin.com/in/arthur-diego/", "arthur.diego7@gmail.com"))
+                .build();
     }
 }
