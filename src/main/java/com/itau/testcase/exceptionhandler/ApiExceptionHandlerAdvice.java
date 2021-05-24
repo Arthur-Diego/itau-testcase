@@ -12,9 +12,7 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 @RestControllerAdvice
 public class ApiExceptionHandlerAdvice extends ResponseEntityExceptionHandler {
 
-    public static final String COMMON_DETAIL = "Ocorreu um erro interno inesperado no sistema. "
-            + "Tente novamente e se o problema persistir, entre em contato "
-            + "com o administrador do sistema.";
+    public static final String COMMON_DETAIL = "An unexpected internal system error has occurred. Try again and if the problem persists, contact your system administrator.";
 
     @Override
     protected ResponseEntity<Object> handleExceptionInternal(Exception ex, Object body, HttpHeaders headers, HttpStatus status, WebRequest request) {

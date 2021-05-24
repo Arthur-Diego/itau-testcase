@@ -21,7 +21,7 @@ public class ValidatePasswordServiceImpl implements ValidatePasswordService {
     @Override
     public Boolean validatePassword(String password){
 
-        log.info("Valid password...");
+        log.info("Validating password...");
 
         if(password.length() < 9){
             throw new PasswordInvalidException("Anything, at least nine places though.");
